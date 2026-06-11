@@ -1,0 +1,368 @@
+<!-- Floating Navigation Header -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="brand">
+      <div class="logo-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+      </div>
+      <span class="logo-text">SphereFlow</span>
+    </div>
+    
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQs</a>
+    </nav>
+    
+    <div class="nav-actions">
+      <!-- Theme Switcher -->
+      <button class="theme-toggle-btn" (click)="toggleTheme()" title="Toggle Theme" aria-label="Toggle Theme">
+        <svg *ngIf="!isDark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg *ngIf="isDark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+      
+      <a href="#pricing" class="cta-nav-btn">Start Free Trial</a>
+    </div>
+  </div>
+</header>
+
+<!-- Floating Success Toast -->
+<div class="toast" *ngIf="successToast">
+  <div class="toast-body">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="toast-icon success"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    <span>{{ successToast }}</span>
+  </div>
+</div>
+
+<!-- Main Area wrapper -->
+<main class="landing-content">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-text">
+        <span class="hero-badge">SphereFlow V2.0 is now live</span>
+        <h1 class="hero-title">Automate your team's workflow in a single workspace</h1>
+        <p class="hero-subtitle">
+          Connect your APIs, run real-time analytics, manage roles, and build pipelines with glassmorphic dashboards that adapt to your exact scale.
+        </p>
+        
+        <div class="hero-cta-group">
+          <a href="#pricing" class="primary-btn">Start Free Trial</a>
+          <a href="#features" class="secondary-btn">Explore Features</a>
+        </div>
+      </div>
+      
+      <!-- Mock App Interface Preview -->
+      <div class="hero-preview">
+        <div class="mock-window">
+          <div class="mock-header">
+            <div class="dots-group">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="mock-url">app.sphereflow.io/workspace/dashboard</div>
+          </div>
+          <div class="mock-body">
+            <!-- Simulated Layout -->
+            <div class="mock-sidebar">
+              <span class="mock-nav-item active"></span>
+              <span class="mock-nav-item"></span>
+              <span class="mock-nav-item"></span>
+              <span class="mock-nav-item"></span>
+            </div>
+            
+            <div class="mock-content">
+              <!-- Top Row Stats -->
+              <div class="mock-stats-row">
+                <div class="mock-stat-card">
+                  <span class="lbl">Tasks Done</span>
+                  <span class="val">1,248</span>
+                </div>
+                <div class="mock-stat-card">
+                  <span class="lbl">Active Users</span>
+                  <span class="val">89.4%</span>
+                </div>
+              </div>
+              
+              <!-- Simulated Graph Graphics -->
+              <div class="mock-chart-card">
+                <span class="lbl">Operations Traffic</span>
+                <div class="mock-bars">
+                  <div class="bar" style="height: 40%"></div>
+                  <div class="bar" style="height: 65%"></div>
+                  <div class="bar active" style="height: 90%"></div>
+                  <div class="bar" style="height: 50%"></div>
+                  <div class="bar" style="height: 75%"></div>
+                  <div class="bar" style="height: 60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="container">
+      <p class="trust-label">TRUSTED BY TEAMS AT LEADING COMPANIES</p>
+      <div class="logo-grid">
+        <!-- Mock tech brand logos using clean SVG tags (avoiding emojis or external images) -->
+        <div class="brand-logo">
+          <svg viewBox="0 0 100 30" class="svg-logo" xmlns="http://www.w3.org/2000/svg">
+            <text x="10" y="20" font-family="var(--font-heading)" font-weight="700" font-size="16" fill="currentColor">STRIPE</text>
+          </svg>
+        </div>
+        <div class="brand-logo">
+          <svg viewBox="0 0 100 30" class="svg-logo" xmlns="http://www.w3.org/2000/svg">
+            <text x="10" y="20" font-family="var(--font-heading)" font-weight="700" font-size="16" fill="currentColor">LINEAR</text>
+          </svg>
+        </div>
+        <div class="brand-logo">
+          <svg viewBox="0 0 100 30" class="svg-logo" xmlns="http://www.w3.org/2000/svg">
+            <text x="10" y="20" font-family="var(--font-heading)" font-weight="700" font-size="16" fill="currentColor">VERCEL</text>
+          </svg>
+        </div>
+        <div class="brand-logo">
+          <svg viewBox="0 0 100 30" class="svg-logo" xmlns="http://www.w3.org/2000/svg">
+            <text x="10" y="20" font-family="var(--font-heading)" font-weight="700" font-size="16" fill="currentColor">SLACK</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Features built for operations</h2>
+        <p class="section-subtitle">Everything you need to orchestrate data and monitor results in one robust suite.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card" *ngFor="let feat of features">
+          <div class="feat-icon-wrapper">
+            <!-- Render custom SVGs based on iconName -->
+            <svg *ngIf="feat.iconName === 'activity'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feat-icon"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            <svg *ngIf="feat.iconName === 'globe'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feat-icon"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <svg *ngIf="feat.iconName === 'users'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feat-icon"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <svg *ngIf="feat.iconName === 'shield'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feat-icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3>{{ feat.title }}</h3>
+          <p>{{ feat.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Tiers -->
+  <section id="pricing" class="pricing-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Transparent pricing for any stage</h2>
+        <p class="section-subtitle">Choose a plan that fits your business needs, with a 14-day free trial on Pro.</p>
+        
+        <!-- Toggle switch -->
+        <div class="billing-toggle-container">
+          <span class="toggle-lbl" [class.active]="billingInterval === 'monthly'">Monthly</span>
+          <button class="toggle-switch" (click)="billingInterval = (billingInterval === 'monthly' ? 'annual' : 'monthly')" aria-label="Toggle Billing Interval">
+            <span class="switch-handle" [class.annual]="billingInterval === 'annual'"></span>
+          </button>
+          <span class="toggle-lbl" [class.active]="billingInterval === 'annual'">
+            Billed Annually
+            <span class="save-badge">Save 20%</span>
+          </span>
+        </div>
+      </div>
+      
+      <div class="pricing-grid">
+        <!-- Starter Plan -->
+        <div class="pricing-card">
+          <div class="card-header">
+            <h3 class="plan-name">Starter</h3>
+            <p class="plan-desc">For small teams getting started.</p>
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="price-val">0</span>
+              <span class="period">/month</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <ul class="features-list">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Up to 3 active projects</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Basic real-time metrics</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Team size of 2 members</span>
+              </li>
+            </ul>
+            <button class="pricing-btn">Get Started</button>
+          </div>
+        </div>
+
+        <!-- Pro Plan (Highlighted) -->
+        <div class="pricing-card highlighted">
+          <div class="popular-tag">MOST POPULAR</div>
+          <div class="card-header">
+            <h3 class="plan-name">Professional</h3>
+            <p class="plan-desc">For growing organizations.</p>
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="price-val" *ngIf="billingInterval === 'monthly'">29</span>
+              <span class="price-val" *ngIf="billingInterval === 'annual'">23</span>
+              <span class="period">/month</span>
+            </div>
+            <span class="billing-detail" *ngIf="billingInterval === 'annual'">Billed $276 annually</span>
+          </div>
+          <div class="card-body">
+            <ul class="features-list">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Unlimited</strong> active projects</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Advanced edge analytics</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Granular roles & members</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>24/7 Priority email support</span>
+              </li>
+            </ul>
+            <button class="pricing-btn primary">Start 14-day Free Trial</button>
+          </div>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="pricing-card">
+          <div class="card-header">
+            <h3 class="plan-name">Enterprise</h3>
+            <p class="plan-desc">For scaled corporate needs.</p>
+            <div class="plan-price">
+              <span class="price-val text-large">Custom</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <ul class="features-list">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>SLA uptime guarantees (99.99%)</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Dedicated VPS hosting endpoints</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Dedicated account manager</span>
+              </li>
+            </ul>
+            <button class="pricing-btn">Contact Sales</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section Accordion -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-subtitle">Common questions regarding the platform, plans, and integrations.</p>
+      </div>
+      
+      <div class="faq-accordion-container">
+        <div class="faq-item" *ngFor="let item of faqs; let i = index" [class.expanded]="activeFaqIndex === i">
+          <button class="faq-question" (click)="toggleFaq(i)" [attr.aria-expanded]="activeFaqIndex === i">
+            <span>{{ item.question }}</span>
+            <span class="chevron-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-wrapper">
+              <p>{{ item.answer }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <h2>Stay ahead of the workflow curve</h2>
+        <p>Subscribe to our newsletter for insights on microservice automation, Edge networks, and product development guides.</p>
+        
+        <form (submit)="subscribeNewsletter(); $event.preventDefault()" class="cta-form">
+          <input type="email" placeholder="Enter your email address" [(ngModel)]="newsletterEmail" name="email" required autocomplete="off" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-icon logo-small">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <span class="footer-logo-text">SphereFlow</span>
+        <p class="brand-subtext">The next-generation workflows scheduler engine.</p>
+      </div>
+      
+      <div class="footer-links-col">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQs</a>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Resources</h4>
+        <a href="#">Documentation</a>
+        <a href="#">Guides</a>
+        <a href="#">System Status</a>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">GDPR</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 SphereFlow Inc. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
