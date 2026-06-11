@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastService } from 'shared-ui';
 
 interface FeatureItem {
   title: string;
@@ -23,7 +24,8 @@ export class LandingComponent implements OnInit {
   
   // Newsletter form model
   newsletterEmail = '';
-  successToast = '';
+
+  constructor(private toastService: ToastService) {}
 
   features: FeatureItem[] = [
     {
@@ -93,11 +95,7 @@ export class LandingComponent implements OnInit {
       return;
     }
 
-    this.successToast = `Thank you! We've sent a confirmation to ${this.newsletterEmail}.`;
+    this.toastService.success(`Thank you! We've sent a confirmation to ${this.newsletterEmail}.`);
     this.newsletterEmail = '';
-
-    setTimeout(() => {
-      this.successToast = '';
-    }, 4000);
   }
 }

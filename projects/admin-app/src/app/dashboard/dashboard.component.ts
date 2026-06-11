@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastService } from 'shared-ui';
 
 interface Transaction {
   id: string;
@@ -39,7 +40,7 @@ export class DashboardComponent implements OnInit {
     status: 'Completed' as 'Completed' | 'Pending' | 'Cancelled'
   };
 
-  successToast = '';
+  constructor(private toastService: ToastService) {}
 
   // Stats items
   stats: {
@@ -186,10 +187,7 @@ export class DashboardComponent implements OnInit {
     this.stats.users.trend[this.stats.users.trend.length - 1] += 1;
 
     // Trigger success alert
-    this.successToast = `Successfully added transaction ${newTxId} for $${newTx.amount}!`;
-    setTimeout(() => {
-      this.successToast = '';
-    }, 4000);
+    this.toastService.success(`Successfully added transaction ${newTxId} for $${newTx.amount}!`);
 
     // Reset form inputs (preserve defaults)
     this.quickTx = {
