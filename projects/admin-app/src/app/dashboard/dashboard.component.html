@@ -429,6 +429,7 @@
                   <th>Product</th>
                   <th>Amount</th>
                   <th>Status</th>
+                  <td>Update at</td>
                 </tr>
               </thead>
               <tbody>
@@ -451,6 +452,7 @@
                       {{ tx.status }}
                     </span>
                   </td>
+                  <td>N/A</td>
                 </tr>
                 <tr *ngIf="getFilteredTransactions().length === 0">
                   <td colspan="5" class="empty-table-cell">
